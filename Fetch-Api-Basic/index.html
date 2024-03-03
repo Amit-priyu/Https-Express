@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+      function getanimaldata(){
+        //  const response=fetch("https://fakerapi.it/api/v1/persons");
+        //  if we console the response we get the promise pending
+        //  console.log(response);
+
+        // method-2
+        // fetch("https://fakerapi.it/api/v1/persons")
+        // .then(async function(response){
+            // response.json().then(function(finaldata){
+        //         console.log(finaldata)
+        
+        //     })
+        // })
+
+        // using async await
+
+      }
+    // using async await syntax..
+    async function getanimaldata1(){
+        const response=await fetch("https://fakerapi.it/api/v1/persons");
+        const finaldata=await response.json();
+        console.log(finaldata);
+    }
+    
+    </script>
+    <button onclick="getanimaldata1()">Get Animal Data</button>
+  
+
+</body>
+</html>
